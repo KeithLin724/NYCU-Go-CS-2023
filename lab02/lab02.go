@@ -14,9 +14,8 @@ func main() {
 
 func Sum(n int64) string {
 	// TODO: Finish this function
-	ans := 0
-	str := ""
-	last := n
+
+	ans, str, last := 0, "", n
 
 	if n%7 == 0 {
 		last--
