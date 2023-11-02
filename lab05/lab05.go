@@ -88,6 +88,11 @@ func YouTubePage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if len(jsonResponse.Items) < 1 {
+		http.ServeFile(w, r, "./error.html")
+		return
+	}
+
 	// TODO: Display the information in an HTML page through `template`
 
 	toHtml := YouTubeIndex{
